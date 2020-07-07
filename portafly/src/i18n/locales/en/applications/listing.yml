@@ -25,6 +25,7 @@ actions_filter_options:
   live: Live
   pending: Pending
   approved: Approved
+  suspended: Suspended
 applications_filter_field: "Filter by {{filter_option}}"
 applications_filter_field_description: Filter by typeahead a text input. This applies for filter by name
 applications_filter_field_aria_label: Filter text input
@@ -38,6 +39,8 @@ applications_table:
  empty_state_description: Message to display when there are no applications to show, and prompt the user to add applications
  name_header: Name
  name_header_description: Column listing the application names
+ product_header: Product
+ product_header_description: Column listing the product of the applications
  state_header: State
  state_header_description: Column listing the state of the applications
  account_header: Account
