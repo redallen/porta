@@ -90,5 +90,4 @@ class Liquid::Drops::ProviderDropTest < ActiveSupport::TestCase
       assert_includes %w[accessible service_accessible], api_spec_drop.system_name
     end
   end
-
 end
