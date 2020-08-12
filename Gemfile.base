@@ -54,11 +54,10 @@ gem 'sidekiq-cron', require: %w(sidekiq/cron sidekiq/cron/web)
 gem 'sidekiq-lock'
 gem 'sidekiq-throttled'
 
-gem 'sidekiq-prometheus-exporter'
-
 # Yabeda metrics
 gem 'yabeda-sidekiq'
 gem 'prometheus-client-mmap'
+gem 'yabeda-prometheus-mmap', require: 'yabeda/prometheus/mmap'
 gem 'yabeda-prometheus'
 
 gem 'activemerchant', '~> 1.77.0'

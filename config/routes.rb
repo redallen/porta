@@ -14,10 +14,7 @@ end
 Rails.application.routes.draw do
 
   constraints PortConstraint.new(ENV.fetch('PROMETHEUS_EXPORTER_PORT', 9090).to_i) do
-    prometheus = Rack::Builder.app do
-      run Sidekiq::Prometheus::Exporter
-    end
-    mount prometheus, at: '/metrics'
+    mount Yabeda::Prometheus::Mmap::Exporter, at: '/metrics'
   end
 
   mount CdnAssets.new => '/_cdn_assets_' unless Rails.configuration.three_scale.assets_cdn_host

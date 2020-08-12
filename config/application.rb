@@ -271,6 +271,9 @@ module System
       # This is a ThinkingSphinx's known bug, fixed in v4.3.0+ - see: https://github.com/pat/thinking-sphinx/commit/814beb0aa3d9dd1227c0f41d630888a738f7c0d6
       # See also https://github.com/pat/thinking-sphinx/issues/1051 and https://github.com/pat/thinking-sphinx/issues/1132
       ThinkingSphinx::Configuration.instance.preload_indices if ActiveRecord::Base.connected?
+      # Configure Yabeda so we can get the sidekiq_enqueued_total_jobs counter
+      # See https://github.com/yabeda-rb/yabeda-sidekiq/issues/10
+      Yabeda.configure! unless Yabeda.already_configured?
     end
 
     config.assets.quiet = true
