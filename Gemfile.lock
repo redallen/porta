@@ -783,11 +783,12 @@ GEM
     yabeda (0.7.0)
       concurrent-ruby
       dry-initializer
-    yabeda-prometheus (0.1.4)
-      yabeda
     yabeda-prometheus-mmap (0.1.1)
       prometheus-client-mmap
       yabeda (~> 0.5)
+    yabeda-rails (0.6.0)
+      rails
+      yabeda (~> 0.4)
     yabeda-sidekiq (0.6.0)
       sidekiq
       yabeda (~> 0.2)
@@ -959,8 +960,8 @@ DEPENDENCIES
   whenever (~> 0.9.7)
   will_paginate (~> 3.1.6)
   xpath (~> 2.1)
-  yabeda-prometheus
   yabeda-prometheus-mmap
+  yabeda-rails
   yabeda-sidekiq
   yard
   zip-zip
