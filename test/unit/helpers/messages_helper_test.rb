@@ -48,11 +48,11 @@ class MessagesHelperTest < ActionView::TestCase
       @provider_sender = FactoryBot.create(:account)
     end
 
-    # should 'return link to buyer account' do
-    #   message_from_buyer = FactoryBot.create(:message, :sender => @buyer_sender)
-    #   assert_equal link_to(@buyer_sender.org_name, admin_buyers_account_path(@buyer_sender), :title => account_title(@buyer_sender)),
-    #                message_sender(message_from_buyer)
-    # end
+    should 'return link to buyer account' do
+      message_from_buyer = FactoryBot.create(:message, :sender => @buyer_sender)
+      assert_equal link_to(@buyer_sender.org_name, admin_buyers_account_path(@buyer_sender), title: account_title(@buyer_sender.decorate)),
+                   message_sender(message_from_buyer)
+    end
 
     should 'return org name of provider account' do
       message_from_provider = FactoryBot.create(:message, :sender => @provider_sender)
