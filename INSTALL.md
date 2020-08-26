@@ -314,7 +314,9 @@ You may need to set up the database from scratch again, in that case use `db:res
 bundle exec rake db:reset # This will drop and setup the database
 ```
 
-**NOTE:** This will seed the application and creates the Master, Provider & Developer accounts which are accessible through: `http://master-account.example.com.lvh.me:3000`, `http://provider-admin.example.com.lvh.me:3000`, `http://provider.example.com.lvh.me:3000` respectively. Please take note of the credentials generated at this moment also so that you can log into each of these portals.
+**NOTE:** This will seed the application and creates the Master, Provider & Developer accounts which are accessible through: `http://master-account.stg-saas.localhost:3000/`, `http://provider-admin.stg-saas.localhost:3000/`, `http://provider.stg-saas.localhost:3000/` respectively. 
+
+Please take note of the credentials generated at this moment also so that you can log into each of these portals.
 
 ## Run Porta
 
